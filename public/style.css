@@ -1,20 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+/* https://www.fontshare.com/fonts/satoshi?fs=60&dt=name */
 
-/* 
-@font-face {
-  font-family: "Myriad Pro Regular";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Myriad Pro Regular"),
-    url("https://github.com/fontfen/myriad-pro/blob/master/MyriadPro-Regular.woff")
-      format("woff");
-} 
-*/
 :root {
   /* --font-family-suggestions: "TEKO", "ABEL", "Fjalla One", "Barlow Condenced", "Varela Round", "Big Shoulders Display"; */
   --primaryColor: #cca2a2;
   --secondaryColor: #ffffff;
   --accentColor: #1b1b1b;
+
+  --border-radius: 4px;
 
   --selectionBg: #ed4c64;
   --selectionColor: fbeee8;
@@ -35,311 +27,184 @@
 }
 
 ::selection {
-  background: var(--selectionBg);
   color: var(--selectionColor);
+  background: var(--selectionBg);
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
 
 body {
-  background: var(--primaryColor);
-  height: 100vh;
-  overflow: hidden;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
 }
 
-.container {
-  padding: 10% 0;
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.options {
-  width: 45%;
-  display: flex;
-  justify-content: space-around;
-  text-transform: capitalize;
-  font-size: 1rem;
-}
-
-.options input {
-  margin-right: 5px;
-}
-
-
-#form {
-  display: flex;
-  justify-content: center;
-  gap: 0.4rem;
-  width: 90%;
-  max-width: 300px;
-
-  margin: 1.5rem auto;
-}
-
-.input,
-.btn {
-  font-family: var(--fontFamily-input);
-  background: var(--secondaryColor);
-  border-radius: 0.8rem;
-  border: 1px solid var(--accentColor);
-  color: var(--accentColor);
-}
-
-.input {
-  padding: 0.4em 0.6em;
-  font-size: 1.2rem;
-  flex: 1;
-}
-
-.input::placeholder {
-  color: var(--accentColor);
-  letter-spacing: 1px;
-}
-
-.btn {
-  cursor: pointer;
-  padding: 0.6rem 0.4rem;
-  padding-left: 0.8rem;
-  font-size: 1.4rem;
-}
-
-.btn:disabled {
-  background: grey;
-  color: white;
-}
-
-.color-list {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 90px);
-  grid-template-rows: repeat(auto-fit, 85px);
-  gap: 2.5rem 1rem;
-  justify-content: center;
-}
-
-.color-list li {
+.svg {
+  width: 30px;
+  height: 24px;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
 
-  /* animation: rotate-360 2s ease-in-out alternate infinite; */
-
-  /* https://dev.to/afif/border-with-gradient-and-radius-387f */
-  /* for gradient-borders along with radius */
-  border: 2px solid transparent;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
-
-
-.color-list li::before {
-  content: '';
-  position: absolute;
-
-  width: inherit;
-  height: inherit;
-  border: 2px solid transparent;
-}
-
-.color-list label {
-  background: var(--secondaryColor);
-  padding: 0px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  width: 84px;
-  height: 84px;
-  border-radius: 50%;
-  position: relative;
-  user-select: none;
-
-  /* https: //css-tricks.com/almanac/properties/b/background-clip/ */
-  /* enables you to start the bg-image start from padding  */
-  background-clip: content-box;
-
-}
-
-.color-list label::before {
-  content: "";
-  background: #1b1b1b50;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 50%;
-  opacity: 0;
-}
-
-.color-list label::after {
-  font-family: "Font Awesome 5 Free";
-  font-size: 1.8rem;
-  content: "\f0c5";
-  color: var(--secondaryColor);
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-}
-
-.color-list.copy label::after {
-  color: black;
-}
-
-.color-list input {
-  text-transform: lowercase;
-  width: 84px;
-
-  position: absolute;
-  top: 110%;
-  text-align: center;
-  width: inherit;
-  background: none;
-  font-size: 1.2rem;
-  font-family: var(--fontFamily-colorName);
-  letter-spacing: 0.4px;
-  transition: opacity 0.4s ease-out;
-  opacity: 0;
-  border: none;
-  outline: none;
-
-  user-select: none;
-
-  animation: none;
-}
-
-.color-list input:read-only {
-  color: var(--accentColor);
-}
-
-.color-list label:hover::after,
-.color-list label:hover::before,
-.color-list label:hover input {
-  opacity: 1;
-
-  transition: opacity 0.6s ease-out;
-}
-
-.copied {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  font-family: var(--fontFamily);
-  font-size: 1rem;
-  margin: 1rem;
-  padding: 0.4rem 0.6rem;
-  border-radius: 0.2rem;
-  color: white;
-  background: #d90429;
-  opacity: 0;
-  transition: all 0.4s;
-}
-
-.copied.is-copied {
-  /* -webkit-animation: scaleUp 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  animation: scaleUp 2s cubic-bezier(0.25, 0.46, 0.45, 0.94); */
-
-  -webkit-animation: slide-left 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-left 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-
-@-webkit-keyframes slide-left {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-
-  30% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes slide-left {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-
-  30% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes rotate-360 {
-  0% {
-    transform: rotate(0)
-  }
-
-  100% {
-    transform: rotate(360deg)
-  }
-}
-
-/* NEW */
-
-.color-block {
-  width: 300px;
-  height: 250px;
-  border: 1px solid;
-  border-radius: 0.5rem;
-}
-
-.color-block header {
-  border-bottom: 2px solid #ed4c64;
+.nav {
   display: flex;
   justify-content: space-between;
-  padding: 0.6rem 0.8rem;
-}
-
-.block__details {
-  display: flex;
   align-items: center;
-  gap: 0.8rem;
+  width: 100vw;
+  height: 55px;
+  padding: 1rem 2rem;
+
+  border-bottom: 1px solid #333333;
 }
 
-.block_name {
+.left {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.middle {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.middle .search {
+  display: flex;
+  width: 45%;
+}
+
+.search .search__input {
+  padding: 0.5rem 0.8rem;
+  text-align: left;
+  text-transform: capitalize;
+  color: #777;
+  font-weight: 500;
   font-size: 1rem;
+  border: 1px solid grey;
+  border-radius: var(--border-radius);
+  width: 100%;
+}
+.search__input:focus {
+  outline: none;
+  border: 1px solid blue;
+  box-shadow: inset 0 0 3px 0px #777;
 }
 
-.svg img {
-  width: 15px;
-  height: 15px;
+.search__btn {
+  border-radius: var(--border-radius);
+  border: 1px solid grey;
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
 }
 
-
-.colors {
-  display: grid;
-
+.search__btn__logo {
+  margin: 0 auto;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' preserveAspectRatio='xMidYMid meet' focusable='false' class='style-scope yt-icon' style='pointer-events: none; display: block; width: 100%25; height: 100%25;'%3E%3Cg class='style-scope yt-icon'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z' class='style-scope yt-icon'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.colors .color {
-  width: 24px;
-  height: 24px;
-  background: #d90429;
+.right .list {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.list li {
+  display:inline-block;
+}
+.theme {
+  margin: 0 2rem;
+  position:relative;
+}
+
+.svg.logo,
+.svg.user {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--border-radius);
+  background-color: #3f3f3f;
+}
+
+.toggle__input {
+  opacity: 0;
+  position: absolute;
+}
+
+.toggle__label {
+  cursor:pointer;
+  width: 1.6rem;
+  height: 0.85rem;
+  background-color: #111;
+  display: flex;
+
+  border-radius: 50px;
+  align-items: center;
+  padding: 0.1rem;
+  position: relative;
+  transform: scale(1.5);
+}
+
+.toggle__ball {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
   border-radius: 50%;
-
+  transition: transform 0.2s linear;
 }
 
+.toggle__input:checked + .toggle__label .toggle__ball {
+  transform: translateX(0.75rem);
+} 
 
-/* safashfksahflnglasnglsanglasn newww */
+
+
+/* theme */
+/* https://www.happyhues.co/palettes/13 */
+
+
+
+/*   <nav class="nav">
+          <!-- menu -->
+          <!-- https://codepen.io/henrymendeez/pen/rNjNNdw -->
+            <section class="menu">
+              <span class="menu__svg svg"></span>
+            </section>
+
+            <!-- search -->
+            <!-- https://codepen.io/coswise/pen/QWbgWdy -->
+            <!-- https://codepen.io/shoby/pen/gOrgVVq -->
+            <section class="search">
+              <label for="search__input"></label>
+              <input type="text" class="search__input" id="search__input">
+              <button class="btn btn--add"></button>
+            </section>
+
+            <!-- switch theme -->
+            <!-- https://www.happyhues.co/palettes/13 -->
+            <section class="right">
+            <section class="theme">
+              <input type="checkbox" class="toggle__input" id="toggle__input" />
+              <label for="toggle__input" class="toggle__label">
+                <div class="toggle__ball"></div>
+              </label>
+            </section>
+
+            <section class="user">
+              <div class="user_profile"></div>
+            </section>
+            </section>
+        </nav>
+ */
