@@ -1,30 +1,36 @@
 /* https://www.fontshare.com/fonts/satoshi?fs=60&dt=name */
 /* https://codepen.io/sosuke/pen/Pjoqqp */
+/* 
+--font-family-suggestions: "TEKO", "ABEL", "Fjalla One", "Barlow Condenced", "Varela Round", "Big Shoulders Display";
+--primaryColor: #cca2a2;
+--secondaryColor: #ffffff;
+--accentColor: #1b1b1b; 
+--text-clr: #2e2f3e; 
+--selection-text: #fbeee8;
+--dark-clr: #111111;
+ */
+
 :root {
-  /* --font-family-suggestions: "TEKO", "ABEL", "Fjalla One", "Barlow Condenced", "Varela Round", "Big Shoulders Display"; */
-  /* --primaryColor: #cca2a2;
-  --secondaryColor: #ffffff;
-  --accentColor: #1b1b1b; */
+  --fontFamily-input: "Myriad Pro Regular", sans-serif;
+  --fontFamily-colorName: "Big Shoulders Display", sans-serif;
+  
+  --fontSize: 1rem;
+  --nav-height: 55px;
+  --border-radius: 4px;
+  --input-width: 180px;
 
   --dark-clr: #0f0e17;
   --light-clr: #eff0f3;
   --selection-bg: #ff8e3c;
   --svg-clr-filter: invert(4%) sepia(6%) saturate(4915%) hue-rotate(207deg)
     brightness(95%) contrast(96%);
-  /* --text-clr: #2e2f3e; */
-  /*
-  --selection-text: #fbeee8;
-  --dark-clr: #111111;
-   */
-  --nav-height: 55px;
-  --border-radius: 4px;
-  --fontFamily-input: "Myriad Pro Regular", sans-serif;
-  --fontFamily-colorName: "Big Shoulders Display", sans-serif;
-  --fontSize: 1rem;
-  --borderColor: #fffffe;
 
-  --input-width: 140px;
+    --info:#3366FF;
+    --success:#6DE02F;
+    --warning:#FFDD21;
+    --error: #FF6614;
 }
+
 .dark-theme {
   --dark-clr: #eff0f3;
   --light-clr: #0f0e17;
@@ -79,6 +85,7 @@ body {
   background: var(--light-clr);
   border: 1px solid var(--dark-clr);
   border-radius: var(--border-radius);
+  padding: 0.2em 0.4em;
 }
 
 .search .search__input {
@@ -90,7 +97,7 @@ body {
 
 .search__input:focus {
   outline: none;
-  border: 1px solid blue;
+  border: 1px solid var(--info);
   box-shadow: inset 0 0 3px 0px var(--dark-clr);
 }
 
@@ -201,31 +208,52 @@ body {
 
 .add__color {
   display: flex;
-  position: relative;
+  /* position: relative; */
 }
+
 .color__input {
+  outline: 2px solid transparent;
   font-size: 0.95rem;
-  padding: 0.1em 0.2em;
-  border-radius: var(--border-radius);
   width: var(--input-width);
+  border-radius: var(--border-radius);
   border: 1px solid var(--dark-clr);
-  outline: none;
+}
+.color__input.error {
+  border-color: transparent;
+  outline-color: var(--error);
+}
+
+.color__input.success {
+  border-color: transparent;
+  outline-color: var(--success);
 }
 
 .btn--add {
+  font-weight: bold;
   padding: 0.4em 0.6em;
+  margin-left: 0.3em;
+  color:whitesmoke;
+  background: var(--info);
+  border: 1px solid whitesmoke;
+}
+
+.btn--add:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+/* .btn--add {
 
   position: absolute;
   inset: 0 0;
   left: -26px;
   opacity: 0;
   transition: all 0.4s ease-in;
-}
+} */
 
-.color__input:focus + .btn--add {
+/* .color__input:focus + .btn--add {
   transform: translateX(calc(var(--input-width) + 26px));
   opacity: 1;
-}
+} */
 
 .color__list {
   width: 100%;
@@ -272,8 +300,12 @@ body {
   bottom: 0;
   border-radius: var(--border-radius);
   opacity: 0;
-  box-shadow: 0 0 0 0.1em currentcolor;
+  /* box-shadow: 0 0 0 0.1em currentcolor; */
+  box-shadow: var(--dark-clr) 0px 0px 0px 3px;
   transition: opacity 0.4s ease-in-out;
+}
+.color__item label:hover::before {
+  opacity: 0.2;
 }
 
 .color__item label::after {
@@ -307,10 +339,6 @@ body {
 
 .color__item input:read-only {
   color: var(--dark-clr);
-}
-
-.color__item label:hover::before {
-  opacity: 0.2;
 }
 
 .color__item label:hover::after,
