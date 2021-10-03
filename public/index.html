@@ -47,13 +47,16 @@
             <section class="select__option">
               <select id="color__code" class="select__color">
                 <option value="default">default</option>
-                <option value="hex">hex</option>
-                <option value="rgb">rgb</option>
-                <option value="hsl">hsl</option>
+                <option value="Hex">hex</option>
+                <option value="Rgb">rgb</option>
+                <option value="Hsl">hsl</option>
               </select>
             </section>
 
             <section class="add__color">
+              <div class="color__preview">
+                <input type="color" name="preview" id="color__preview" value="#000000">
+              </div>
               <input class="input color__input" type="text" placeholder="add color" />
               <input type="submit" class="btn btn--add" value="ADD" disabled>
             </section>
@@ -65,8 +68,9 @@
             <section class="unordered">
               <ul class="color__list">
                 <li class="color__item">
-                  <label for="color1">
-                    <input type="tex style="color:#baddad"t" data-index="1" id="color1" class="color__value" readonly value="#baddad">
+                  <label for="color1" style="color:#baddad">
+                    <input type="text" data-index="1" id="color1" class="color__value" readonly
+                      value="#baddad">
                   </label>
                 </li>
                 <li class="color__item">
@@ -98,7 +102,11 @@
 
     </main>
 
-    <script src="script.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js"
+      integrity="sha512-+aXA9mgbUvFe0ToTlbt8/3vT7+nOgUmFw29wfFCsGoh8AZMRSU0p4WtOvC1vkF2JBrndPN2TuNZsHPAKPPxe8Q=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+      <script type='text/javascript' src='tinycolor.js'></script>
+      <script src="script.js"></script>
   </body>
 
 </html>

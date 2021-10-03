@@ -13,7 +13,7 @@
 :root {
   --fontFamily-input: "Myriad Pro Regular", sans-serif;
   --fontFamily-colorName: "Big Shoulders Display", sans-serif;
-  
+
   --fontSize: 1rem;
   --nav-height: 55px;
   --border-radius: 4px;
@@ -25,10 +25,10 @@
   --svg-clr-filter: invert(4%) sepia(6%) saturate(4915%) hue-rotate(207deg)
     brightness(95%) contrast(96%);
 
-    --info:#3366FF;
-    --success:#6DE02F;
-    --warning:#FFDD21;
-    --error: #FF6614;
+  --info: #3366ff;
+  --success: #6de02f;
+  --warning: #ffdd21;
+  --error: #ff6614;
 }
 
 .dark-theme {
@@ -208,7 +208,30 @@ body {
 
 .add__color {
   display: flex;
-  /* position: relative; */
+}
+
+.color__preview {
+  width: 26px;
+  height: 26px;
+  border: 0;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  margin: 0 0.4rem;
+  outline: 2px solid transparent;
+}
+
+/* 
+.success .color__preview {
+  outline-color: var(--error);
+}
+ */
+
+.color__preview input {
+  -webkit-appearance: none;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.3);
 }
 
 .color__input {
@@ -218,42 +241,32 @@ body {
   border-radius: var(--border-radius);
   border: 1px solid var(--dark-clr);
 }
-.color__input.error {
+.color__input:focus {
+  border-color: transparent;
+}
+.error .color__input {
   border-color: transparent;
   outline-color: var(--error);
 }
 
-.color__input.success {
+.success .color__input {
   border-color: transparent;
   outline-color: var(--success);
 }
 
 .btn--add {
   font-weight: bold;
-  padding: 0.4em 0.6em;
-  margin-left: 0.3em;
-  color:whitesmoke;
+  padding: 0.1em 0.6em;
+  color: whitesmoke;
   background: var(--info);
   border: 1px solid whitesmoke;
+  margin: 0 0.3rem;
 }
 
 .btn--add:disabled {
   background: #cccccc;
   cursor: not-allowed;
 }
-/* .btn--add {
-
-  position: absolute;
-  inset: 0 0;
-  left: -26px;
-  opacity: 0;
-  transition: all 0.4s ease-in;
-} */
-
-/* .color__input:focus + .btn--add {
-  transform: translateX(calc(var(--input-width) + 26px));
-  opacity: 1;
-} */
 
 .color__list {
   width: 100%;
