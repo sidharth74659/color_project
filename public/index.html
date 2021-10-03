@@ -16,15 +16,13 @@
       <nav class="nav">
         <section class="left">
           <div class="svg logo"></div>
-
-          </div>
-
         </section>
+
         <section class="middle">
           <div class="search">
-            <input type="search" class="search__input" placeholder="Search" aria-label="true" />
-            <button class="search__btn">
-              <div class="svg search__btn__logo"></div>
+            <input type="search" class="input search__input" placeholder="Search" aria-label="true" />
+            <button class="btn btn--search">
+              <div class="svg btn--search__logo"></div>
             </button>
           </div>
 
@@ -43,9 +41,54 @@
         </section>
       </nav>
 
-      <section class="content">
+      <section class="section">
         <section class="dashboard">
+          <section class="header">
+            <section class="select__option">
+              <select id="color__code" class="select__color">
+                <option value="default">default</option>
+                <option value="hex">hex</option>
+                <option value="rgb">rgb</option>
+                <option value="hsl">hsl</option>
+              </select>
+            </section>
 
+            <section class="add__color">
+              <input class="input color__input" type="text" placeholder="add color" />
+              <button class="btn btn--add">+</button>
+            </section>
+          </section>
+
+
+
+          <section class="categories">
+            <section class="unordered">
+              <ul class="color__list">
+                <li class="color__item">
+                  <label for="color1">
+                    <input type="tex style="color:#baddad"t" data-index="1" id="color1" class="color__value" readonly value="#baddad">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color2" style="color:#facade">
+                    <input type="text" data-index="2" id="color2" class="color__value" readonly value="#facade">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color3" style="color:#746593">
+                    <input type="text" data-index="3" id="color3" class="color__value" readonly value="#746593">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color4" style="color:#143420">
+                    <input type="text" data-index="4" id="color4" class="color__value" readonly value="#143420">
+                  </label>
+                </li>
+              </ul>
+            </section>
+            <section class="public"></section>
+            <section class="private"></section>
+          </section>
         </section>
 
         <aside class="explore">
@@ -54,6 +97,8 @@
       </section>
 
     </main>
+
+    <script src="script.js"></script>
   </body>
 
 </html>
