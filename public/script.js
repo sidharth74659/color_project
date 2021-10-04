@@ -7,11 +7,15 @@ const add__color__section = document.querySelector('.add__color');
 const color__preview = document.querySelector('#color__preview');
 const color__code = document.querySelector("#color__code")
 
-let color__code__choice = color__code.value;
 let tiny__color;
+let color__code__choice;
+
+color__code__choice = color__code.value;
 
 color__code.addEventListener('change', (e) => {
     color__code__choice = color__code.value;
+    color__input.value = color__input.value ? choiceBasedColor(color__input.value) : ""
+
 })
 
 color__preview.addEventListener('input', (e) => {
@@ -19,10 +23,9 @@ color__preview.addEventListener('input', (e) => {
     btn__add.disabled = false;
 })
 
-document.querySelector('.btn--add').addEventListener("click", addColor);	//avoid duplicate colors
-
 color__input.addEventListener('input', validateColor)
 
+btn__add.addEventListener("click", addColor);	//avoid duplicate colors
 
 theme.addEventListener('change', () => {
     document.documentElement.classList.toggle('dark-theme')
@@ -54,11 +57,16 @@ function copyColor(e) {
 async function addColor(event) {
     event.preventDefault();
 
-    let newColor = color__input.value.toLowerCase();
+    // let nc = tinycolor(color__input.value);
+    // console.log(nc.toString());
+    
+    let newColor = tinycolor('#' + color__input.value);
 
+    // newColor = (newColor.getFormat() === 'hex') ? '#' + color__input.value : newColor.toString()
     // console.log(CSS.supports('color', newColor))
-
     // newColor = (`#${newColor}`.includes('##')) ? tinycolor(newColor).toHexString() : newColor.toString();
+    
+    console.log(color__input.value);
 
     // await fetch('/db/create', {
     //     method: 'POST',
@@ -71,8 +79,11 @@ async function addColor(event) {
     //update the color onto Display
     // populateList();
     color__input.value = '';
+    btn__add.disabled = true;
+
     // form.reset();
 }
+
 
 function choiceBasedColor(color) {
     tiny__color = tinycolor(color);
@@ -91,11 +102,15 @@ function choiceBasedColor(color) {
 
 
 function validateColor() {
+    tiny__color = tinycolor(color__input.value);
+    color__preview.value = tiny__color.toHexString();
     btn__add.disabled = true;
 
-    tiny__color = tinycolor(color__input.value);
     if (color__input.value.length >= 3 && tiny__color.isValid()) {
         btn__add.disabled = false;
-        color__preview.value = tiny__color.toHexString();
     }
+    // else {
+    //     color__preview.value = '#111111'
+
+    // }
 }

@@ -55,9 +55,9 @@
 
             <section class="add__color">
               <div class="color__preview">
-                <input type="color" name="preview" id="color__preview" value="#000000">
+                <input type="color" name="preview" id="color__preview">
               </div>
-              <input class="input color__input" type="text" placeholder="add color" />
+              <input class="input color__input" type="text" value="" placeholder="add color" />
               <input type="submit" class="btn btn--add" value="ADD" disabled>
             </section>
           </section>
@@ -69,13 +69,12 @@
               <ul class="color__list">
                 <li class="color__item">
                   <label for="color1" style="color:#baddad">
-                    <input type="text" data-index="1" id="color1" class="color__value" readonly
-                      value="#baddad">
+                    <input type="text" data-index="1" id="color1" class="color__value" readonly value="#baddad">
                   </label>
                 </li>
                 <li class="color__item">
-                  <label for="color2" style="color:#facade">
-                    <input type="text" data-index="2" id="color2" class="color__value" readonly value="#facade">
+                  <label for="color2" style="color:hsl(256, 36%, 25%)">
+                    <input type="text" data-index="2" id="color2" class="color__value" readonly value="hsl(256, 36%, 25%)">
                   </label>
                 </li>
                 <li class="color__item">
@@ -86,6 +85,11 @@
                 <li class="color__item">
                   <label for="color4" style="color:#143420">
                     <input type="text" data-index="4" id="color4" class="color__value" readonly value="#143420">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color5" style="color:#facade">
+                    <input type="text" data-index="5" id="color5" class="color__value" readonly value="#facade">
                   </label>
                 </li>
               </ul>
@@ -105,8 +109,8 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js"
       integrity="sha512-+aXA9mgbUvFe0ToTlbt8/3vT7+nOgUmFw29wfFCsGoh8AZMRSU0p4WtOvC1vkF2JBrndPN2TuNZsHPAKPPxe8Q=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-      <script type='text/javascript' src='tinycolor.js'></script>
-      <script src="script.js"></script>
+    <script type='text/javascript' src='tinycolor.js'></script>
+    <script src="script.js"></script>
   </body>
 
 </html>
