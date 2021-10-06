@@ -1,4 +1,8 @@
 // @ts-nocheck
+
+// Helpful links :
+// https://stackoverflow.com/questions/6060417/find-out-what-html-elements-are-forcing-the-page-block-section-to-be-wide-tall
+
 const theme = document.querySelector('.theme input[type="checkbox"]')
 const color__list = document.querySelector('.color__list');
 const color__input = document.querySelector('.color__input');
@@ -114,3 +118,10 @@ function validateColor() {
 
     // }
 }
+
+
+
+
+
+
+
