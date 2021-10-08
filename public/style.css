@@ -187,7 +187,6 @@ body {
 
 .dashboard {
   /* width: 100%; */
-
 }
 .palette,
 .dashboard,
@@ -395,8 +394,8 @@ body {
   overflow-x: scroll;
 }
 .collections .color__list {
-  --grid-column-gap: 45px;
-  --grid-row-gap: 45px;
+  --grid-column-gap: 24px;
+  --grid-row-gap: 24px;
   font-size: 0.85em;
   display: grid;
   grid-template-columns: repeat(3, var(--grid-column-gap));
@@ -410,8 +409,8 @@ body {
 
 .public li,
 .private li {
-  width: 45px;
-  height: 45px;
+  width: 24px;
+  height: 24px;
 }
 
 /* 
@@ -428,3 +427,13 @@ body {
 <!-- switch theme -->
 <!-- https://www.happyhues.co/palettes/13 -->  
 */
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+  .section {
+    grid-template-columns: 0 100% 0;
+  }
+}
