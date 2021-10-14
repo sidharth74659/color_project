@@ -23,8 +23,7 @@
 ### Tools
 
 - [CSS filter generator](https://codepen.io/sosuke/full/Pjoqqp) to turn images/svg color to a target color
-
-
+- [Tint & Shade Generator](https://maketintsandshades.com/)
 
 ### Logging into Github from Terminal using Personal Access Tokens
 
