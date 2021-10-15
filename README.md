@@ -18,7 +18,7 @@
 | Domain     | Link                                                                                                             |
 | ---------- | ---------------------------------------------------------------------------------------------------------------- |
 | Forms      | [accessible-color-scheme](https://medium.com/envoy-design/how-to-design-an-accessible-color-scheme-4a13ca12c92b) |
-| Dark Theme | [Tips for dark theme design](https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6)                     |
+| Dark Theme | [Tips for dark theme design](https://uxplanet.org/8-tips-for-dark-theme-design-8dfc2f8f7ab6) <br> [accessibility inspired dark mode](https://www.habaneroconsulting.com/stories/insights/2021/accessibility-inspired-dark-mode) <br>  [material design dark-theme](https://material.io/design/color/dark-theme.html#properties) <br> |
 
 ### Tools
 
