@@ -7,7 +7,9 @@
     * should i remove the border-left on .search__btn
     * dark-theme color : #121212 ? 
     * add icons for error messages ?
-    *  
+    * can filter property be used to invert color of a 'currentColor' ? try for copy->box-shadow : try 
+    * input hover states : https://www.dell.com/support/home/en-in/product-support/servicetag/0-U3BWUHowYmlBNTE0eVpycGVmSEZ4dz090/drivers
+    * 
  */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap");
 
@@ -18,9 +20,11 @@ html {
   --color-primary: #f7e2c8;
   --color-secondary: #3e1c96;
 
-  --clr-one: yellow;
-  --clr-two: var(--color-primary);
-  --clr-three: darkgrey;
+  --clr-grey: darkgrey;
+  --clr-pink: pink;
+  --clr-pinkish: #ff007f;
+  --clr-green: #5b9279;
+  --clr-yellow: yellow;
 
   --font-family: Inter, sans-seriif;
   --font-family-headings: "Work Sans", sans-serif;
@@ -79,9 +83,9 @@ html {
 .dark-theme {
   --color-primary: #111215;
 
-  --clr-one: var(--color-primary);
-  --clr-two: var(--color-primary);
-  --clr-three: var(--color-primary);
+  --clr-yellow: var(--color-primary);
+  --clr-pink: var(--color-primary);
+  --clr-grey: var(--color-primary);
 
   /* --color-primary: #121212; */
 
@@ -288,7 +292,7 @@ small {
 /* main-content */
 
 .btns {
-  display: flex;
+  display: none;
   justify-content: space-evenly;
   gap: 1rem;
   width: 100%;
@@ -317,95 +321,106 @@ small {
   text-transform: capitalize;
   color: var(--input-text);
 }
-
+/* 
 .content > * {
-  /* border: 1px solid red; */
-}
+  border: 1px solid red;
+} */
 
 .content {
   height: 100%;
   display: grid;
-
-  grid-template-rows: auto 1fr;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "btns"
-    "dashboard dashboard";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "gradient dashboard explore";
 }
 
-.gradient {
-  grid-area: gradient;
-  display: none;
-}
 .dashboard {
   grid-area: dashboard;
 }
+
 .explore {
+  border-left: 1px solid var(--color-black-dark);
   grid-area: explore;
-  display: none;
 }
-/* aside-left */
+/* aside-left .gradient*/
+.gradient {
+  grid-area: gradient;
+  display: block;
+  border-right: 1px solid var(--color-black-dark);
+}
 
-@media only screen and (min-width: 500px) {
-  /*Small smartphones [325px -> 425px]*/
-  body {
-    background: var(--clr-three);
+/* media-queries */
+.media-query {
+  width: 40px;
+  height: 20px;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  background: var(--clr-yellow);
+}
+
+@media only screen and (max-width: 600px) {
+  /* mobile-devices */
+  .media-query {
+    background: var(--clr-grey);
+  }
+
+  .btns {
+    display: flex;
+  }
+
+  .content {
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "btns"
+      "dashboard";
+  }
+
+  .gradient,
+  .explore {
+    display: none;
   }
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    background: var(--clr-two);
+@media only screen and (max-width: 768px) and (min-width: 600px) {
+  /* iPads, Tablets */
+  .media-query {
+    background: var(--clr-pink);
   }
-
   .content {
     grid-template-columns: 1fr 2fr;
-    grid-template-areas: "gradient dashboard";
+    grid-template-areas: " gradient dashboard";
   }
-  .gradient {
-    display: block;
-  }
-  .btns,
+
   .explore {
     display: none;
   }
 }
-/* Large devices (desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  body {
-    background: var(--clr-one);
-  }
-  .content {
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: "gradient dashboard explore";
-  }
-  .explore {
-    display: block;
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  /* small screens, laptops */
+  .media-query {
+    background: var(--clr-yellow);
   }
 }
 
-@media only screen and (max-width: 1200px) {
-  /*Tablets [601px -> 1200px]*/
-}
-@media (max-width: 768px) {
-  /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-}
-@media only screen and (max-width: 600px) {
-  /*Big smartphones [426px -> 600px]*/
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  /* small screens, laptops */
+  .media-query {
+    background: var(--clr-pinkish);
+  }
 }
 
-/* @media only screen and (min-width: 500px) {
-  body {
-    background: red;
+@media only screen and (max-width: 1366px) and (min-width: 1024px) {
+  /* Desktops, large screens */
+  .media-query {
+    background: var(--clr-green);
   }
-  .content {
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: " dashboard";
-  }
+}
 
-  .explore,
-  .gradient {
-    display: none;
+@media only screen and (min-width: 1367px) {
+  /* Desktops, large screens */
+  .media-query {
+    background: var(--clr-yellow);
   }
-} */
+}
