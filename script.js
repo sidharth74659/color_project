@@ -40,12 +40,12 @@ function validateColor() {
 
             search__bar.classList.remove('error');
             search__bar.classList.add('success');
-            search__bar.querySelector('small').innerText = "Valid Color";
+            search__bar.querySelector('small span').innerText = "Valid Color";
         }
         else {
             search__bar.classList.remove('success');
             search__bar.classList.add('error');
-            search__bar.querySelector('small').innerText = "Invalid Color";
+            search__bar.querySelector('small span').innerText = "Invalid Color";
         }
     } else {
         search__bar.classList.remove('success');

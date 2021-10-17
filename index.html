@@ -1,244 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Color Store</title>
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"></script> -->
-		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
-		<link rel="stylesheet" href="style.css">
-	</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Store</title>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+  </head>
 
-	<body class="">
-		<!-- <body class="dark-theme"> -->
+  <body class="">
+    <!-- <body class="dark-theme"> -->
 
-		<main class="container">
-			<nav class="nav">
-				<section class="left">
-					<div class="box--large logo"></div>
-				</section>
+    <main class="container">
+      <nav class="nav">
+        <section class="left">
+          <div class="box--large logo"></div>
+        </section>
 
-				<section class="middle">
-					<div class="search search--bar">
-						<input type="search" class="input search__input" placeholder="Search" aria-label="true" />
-						<button class="btn search__btn">
-							<div class="svg search__logo"></div>
-						</button>
-						<small class="input-message">Input is empty</small>
-					</div>
+        <section class="middle">
+          <div class="search search--bar">
+            <input type="search" class="input search__input" placeholder="Search" aria-label="true" />
+            <button class="btn search__btn">
+              <div class="svg search__logo"></div>
+            </button>
+            <small class="input-message"><i class="svg"></i><span>Input is empty</span></small>
+          </div>
 
-				</section>
+        </section>
 
-				<section class="right">
-					<ul class="list">
-						<li class="theme">
-							<button class="switch-theme"></button>
-						</li>
+        <section class="right">
+          <ul class="list">
+            <li class="theme">
+              <button class="switch-theme"></button>
+            </li>
 
-						<li>
-							<div class="box--large user"></div>
-						</li>
-					</ul>
-				</section>
-			</nav>
-			<section class="content">
-				<div class="btns">
-					<button class="btn-gradient btn-aside"><i class="svg"></i><span
-							class="heading--large">gradient</span></button>
-					<button class="btn-explore btn-aside"><i class="svg"></i><span
-							class="heading--large">explore</span></button>
-				</div>
+            <li>
+              <div class="box--large user"></div>
+            </li>
+          </ul>
+        </section>
+      </nav>
+      <section class="content">
+        <div class="btns">
+          <button class="btn-gradient btn-aside"><i class="svg"></i><span
+              class="heading--large">gradient</span></button>
+          <button class="btn-explore btn-aside"><i class="svg"></i><span class="heading--large">explore</span></button>
+        </div>
 
-				<aside class="gradient">
-					<div class="header">
-						<h2 class="heading--large">gradient</h2>
-					</div>
-					<section class="gradient-box">
+        <aside class="gradient">
+          <div class="header">
+            <h2 class="heading--large">gradient</h2>
+          </div>
+          <section class="gradient-box">
 
-					</section>
-					<ul class="gradient-list">
-						<li class="gradient-item">
-							<div class="gradient-color"></div>
-						</li>
-						<li class="gradient-item">
-							<div class="gradient-color"></div>
-						</li>
-						<li class="gradient-item">
-							<div class="gradient-color"></div>
-						</li>
-						<li class="gradient-item">
-							<div class="gradient-color"></div>
-						</li>
-						<li class="gradient-item">
-							<div class="gradient-color"></div>
-						</li>
-						<li class="gradient-item add--gradient-item"><button
-								class=" btn gradient-color add--gradient-color"></button></li>
+          </section>
+          <ul class="gradient-list">
+            <li class="gradient-item">
+              <div class="gradient-color"></div>
+            </li>
+            <li class="gradient-item">
+              <div class="gradient-color"></div>
+            </li>
+            <li class="gradient-item">
+              <div class="gradient-color"></div>
+            </li>
+            <li class="gradient-item">
+              <div class="gradient-color"></div>
+            </li>
+            <li class="gradient-item">
+              <div class="gradient-color"></div>
+            </li>
+            <li class="gradient-item add--gradient-item"><button
+                class=" btn gradient-color add--gradient-color"></button></li>
 
-					</ul>
-				</aside>
-				<section class="dashboard">dashboard</section>
-				<aside class="explore">
-					<div class="header">
-						<h2 class="heading--large">explore</h2>
-					</div>
-					<ul class="explore-list">
-						<li class="explore-item">
-							<div class="item__heading">
-								<h3 class="item__title">Marvel</h3>
-								<button class="btn copy"></button>
-							</div>
-							<ul class="item__color__list">
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-							</ul>
-							<div class="item__credits">
-								By <a href="#" class="item__author">Duku Edem Dojo</a>
-							</div>
-						</li>
-						<li class="explore-item">
-							<div class="item__heading">
-								<h3 class="item__title">Marvel</h3>
-								<button class="btn copy"></button>
-							</div>
-							<ul class="item__color__list">
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-							</ul>
-							<div class="item__credits">
-								By <a href="#" class="item__author">Nitish</a>
-							</div>
-						</li>
-						<li class="explore-item">
-							<div class="item__heading">
-								<h3 class="item__title">Marvel</h3>
-								<button class="btn copy"></button>
-							</div>
-							<ul class="item__color__list">
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-							</ul>
-							<div class="item__credits">
-								By <a href="#" class="item__author">Deepak</a>
-							</div>
-						</li>
-						<li class="explore-item">
-							<div class="item__heading">
-								<h3 class="item__title">Marvel</h3>
-								<button class="btn copy"></button>
-							</div>
-							<ul class="item__color__list">
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-							</ul>
-							<div class="item__credits">
-								By <a href="#" class="item__author">Jeevan</a>
-							</div>
-						</li>
-						<li class="explore-item">
-							<div class="item__heading">
-								<h3 class="item__title">Marvel</h3>
-								<button class="btn copy"></button>
-							</div>
-							<ul class="item__color__list">
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-								<li class="item__color__item">
-									<div class="item__color"></div>
-								</li>
-							</ul>
-							<div class="item__credits">
-								By <a href="#" class="item__author">Sidharth</a>
-							</div>
-						</li>
-					</ul>
-				</aside>
+          </ul>
+        </aside>
+        <section class="dashboard">dashboard</section>
+        <aside class="explore">
+          <div class="header">
+            <h2 class="heading--large">explore</h2>
+          </div>
+          <ul class="explore-list">
+            <li class="explore-item">
+              <div class="item__heading">
+                <h3 class="item__title">Marvel</h3>
+                <button class="btn copy"></button>
+              </div>
+              <ul class="item__color__list">
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+              </ul>
+              <div class="item__credits">
+                By <a href="#" class="item__author">Duku Edem Dojo</a>
+              </div>
+            </li>
+            <li class="explore-item">
+              <div class="item__heading">
+                <h3 class="item__title">Marvel</h3>
+                <button class="btn copy"></button>
+              </div>
+              <ul class="item__color__list">
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+              </ul>
+              <div class="item__credits">
+                By <a href="#" class="item__author">Nitish</a>
+              </div>
+            </li>
+            <li class="explore-item">
+              <div class="item__heading">
+                <h3 class="item__title">Marvel</h3>
+                <button class="btn copy"></button>
+              </div>
+              <ul class="item__color__list">
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+              </ul>
+              <div class="item__credits">
+                By <a href="#" class="item__author">Deepak</a>
+              </div>
+            </li>
+            <li class="explore-item">
+              <div class="item__heading">
+                <h3 class="item__title">Marvel</h3>
+                <button class="btn copy"></button>
+              </div>
+              <ul class="item__color__list">
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+              </ul>
+              <div class="item__credits">
+                By <a href="#" class="item__author">Jeevan</a>
+              </div>
+            </li>
+            <li class="explore-item">
+              <div class="item__heading">
+                <h3 class="item__title">Marvel</h3>
+                <button class="btn copy"></button>
+              </div>
+              <ul class="item__color__list">
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+                <li class="item__color__item">
+                  <div class="item__color"></div>
+                </li>
+              </ul>
+              <div class="item__credits">
+                By <a href="#" class="item__author">Sidharth</a>
+              </div>
+            </li>
+          </ul>
+        </aside>
 
-			</section>
-		</main>
+      </section>
+    </main>
 
-		<div class="media-query"></div>
-		<script type='text/javascript' src="assets/package/tinycolor.js"></script>
-		<script src="script.js"></script>
-	</body>
+    <div class="media-query"></div>
+    <script type='text/javascript' src="assets/package/tinycolor.js"></script>
+    <script src="script.js"></script>
+  </body>
 
 </html>
