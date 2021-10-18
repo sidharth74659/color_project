@@ -27,6 +27,23 @@
 - [CSS filter generator](https://codepen.io/sosuke/full/Pjoqqp) to turn images/svg color to a target color
 - [Tint & Shade Generator](https://maketintsandshades.com/)
 
+### Useful scripts
+
+#### Dealing with media-queries ?
+ use this [trick](https://codepen.io/sidharth74659/pen/JjyXpKP?editors=0100) 
+
+#### Find element taking up extra space (wil add the source link when i find it)
+
+```js
+var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(document.querySelectorAll("*"), function (el) {
+  if (el.offsetWidth > docWidth) {
+    console.log(el);
+  }
+});
+```
+
 ### Logging into Github from Terminal using Personal Access Tokens
 
 Personal Access Tokens : Go to profile > Settings > Developer Settings > Personal Access Tokens > Generate New Token > Enable required Permissisons > copy code/token (which is availaible only once)
