@@ -4,14 +4,19 @@
 
     ! Validation check : 
         * #1324 || abaa : results in hex8 format => op : rgba(17, 51, 34, 0.27)
-
+        * hsl(256, 36%, 25%)[object HTMLLabelElement] => valid color 😠
+        * #baddhsl(256, 36%, 25%)ad  => valid color 😠
  */
+
 const theme = document.querySelector('.switch-theme')
 const color__input = document.querySelectorAll('.search__input');
 const color__preview = document.querySelector('.preview')
+const colors = document.querySelectorAll('.color__item');
 
 let search__bar;
 let formattedColor;
+
+colors.forEach(color => color.addEventListener("click", function () { navigator.clipboard.writeText(this.querySelector('input').value) }))
 
 theme.addEventListener('click', () => {
     document.documentElement.classList.toggle('dark-theme')
@@ -28,7 +33,7 @@ function validateColor(e) {
 
     formattedColor = input__color;
     tiny__color = tinycolor(input__color);
-    // btn__add.disabled = true;
+    // btn__add.disabled = true;    //disable the search_button as long as the search__input is not a valid color
 
     if (input__color.length >= 3) {
         if (tiny__color.isValid()) {

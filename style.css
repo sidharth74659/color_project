@@ -12,7 +12,9 @@
     * can filter property be used to invert color of a 'currentColor' ? try for copy->box-shadow : try 
     * input hover states : https://www.dell.com/support/home/en-in/product-support/servicetag/0-U3BWUHowYmlBNTE0eVpycGVmSEZ4dz090/drivers
     * add tooltips on hover using attr(data-items)
-    * 
+    * try different fonts like Oswald,...
+    * transitions maybe...?
+    * add ellipsis to error-message
  */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
@@ -30,7 +32,7 @@ html {
   --clr-pinkish: #ff007f;
   --clr-green: #5b9279;
   --clr-yellow: yellow;
-
+--clr-red: red;
   /* COLORS */
   --color-black-light: #808080;
   --color-black-medium: #4d4d4d;
@@ -65,6 +67,7 @@ html {
 
   --box-shadow-primary: var(--box-shadow-color) 0px 7px 29px 0px;
   --box-shadow-secondary: var(--color-input-state) 0px 7px 29px 0px;
+  --box-shadow-third: var(--color-black-dark) 0px 0px 0px 3px;
 
   --drop-shadow: 0px 12px 16px -4px #10182810, 0px 4px 6px -2px #10182805;
 
@@ -86,6 +89,7 @@ html {
 
   --font-family: Inter, sans-seriif;
   --font-family-headings: "Work Sans", sans-serif;
+  --font-family-roboto: "Roboto", sans-serif; /* Try Oswald */
 
   --fontSize-small: 0.7rem;
   --fontSize-medium: 0.95rem;
@@ -106,10 +110,6 @@ html {
 .dark-theme {
   --color-primary: #111215;
   /* --color-primary: #121212; */
-
-  --clr-yellow: var(--color-primary);
-  --clr-pink: var(--color-primary);
-  --clr-grey: var(--color-primary);
 
   --color-black-light: #808080;
   --color-black-medium: #b3b3b3;
@@ -416,8 +416,12 @@ summary::before {
   transition: 0.25s transform ease;
 }
 
+details[open] > summary {
+  border-bottom: 1px solid var(--color-black-dark);
+}
+
 /* THE MAGIC 🧙‍♀️ */
-details[open] > summary:before {
+details[open] > summary::before {
   transform: rotate(90deg);
 }
 
@@ -453,9 +457,10 @@ summary i {
   filter: var(--filter-primary);
 }
 
-.dark-theme .redadashboard .search__btn:hover {
+.dark-theme .dashboard .search__btn:hover {
   outline: 1px solid var(--color-black-dark);
 }
+
 .dashboard .search__input {
   width: 160px;
   padding: 0.2rem;
@@ -463,6 +468,91 @@ summary i {
   border: 1px solid var(--color-input-state);
   border-radius: var(--border-radius-primary);
 }
+
+.unordered-list {
+  padding: 2rem ;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 1.5rem;
+}
+
+.color__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.color__item label {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  cursor: pointer;
+  user-select: none;
+  background: currentColor;
+  border-radius: 4px;
+
+  position: relative;
+}
+
+.color__item label::before {
+  /* for box-shadow */
+  box-shadow: var(--box-shadow-third);
+  opacity: 0;
+
+  content: "";
+  font-size: calc(4 * 1rem);
+  position: absolute;
+  inset: 0 0;
+  transition: opacity 0.2s ease-in-out;
+  border-radius: var(--border-radius-primary);
+}
+.color__item label:hover::before {
+  opacity: 0.2;
+}
+
+.color__item label::after {
+  content: url(assets/svg/clipboard.svg);
+  font-size: 1.8rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.color__item label:hover::after,
+.color__item label:hover input {
+  opacity: 1;
+}
+
+.color__item input {
+  font-family: var(--font-family-roboto);
+  font-size: 0.95em;
+  text-align: center;
+  text-transform: lowercase;
+  color: var(--color-black-dark);
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  border: none;
+  outline: none;
+  background: none;
+  user-select: none;
+  transition: opacity 0.4s ease-out;
+}
+
+
+.unordered-list li {
+  width: 40px;
+  height: 40px;
+}
+
 /* aside-left .gradient*/
 .gradient {
   grid-area: gradient;
@@ -633,11 +723,19 @@ summary i {
 }
 
 /* media-queries */
+.media-query {
+  width: 40px;
+  height: 20px;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  background: var(--clr-grey);
+}
 
 @media only screen and (max-width: 600px) {
   /* mobile-devices */
   .media-query {
-    background: var(--clr-grey);
+    background: var(--clr-yellow);
   }
   .nav {
     padding: 1rem;
@@ -657,6 +755,9 @@ summary i {
   .gradient,
   .explore {
     display: none;
+  }
+    .unordered-list {
+    padding: 2.5rem;
   }
 }
 
@@ -678,14 +779,18 @@ summary i {
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
   /* small screens, laptops */
   .media-query {
-    background: var(--clr-yellow);
+    background: var(--clr-red);
   }
+  
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
   /* small screens, laptops */
   .media-query {
     background: var(--clr-pinkish);
+  }
+  .unordered-list {
+    padding: 2.5rem;
   }
 }
 

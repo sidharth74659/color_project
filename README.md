@@ -32,6 +32,12 @@
 #### Dealing with media-queries ?
  use this [trick](https://codepen.io/sidharth74659/pen/JjyXpKP?editors=0100) 
 
+#### To copy a text to clipboard using a one-line javascript code
+
+```js
+navigator.clipboard.writeText(text)
+```
+
 #### Find element taking up extra space (wil add the source link when i find it)
 
 ```js

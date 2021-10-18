@@ -8,12 +8,14 @@
     <title>Color Store</title>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"></script> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
+
     <link rel="stylesheet" href="trash.css">
     <link rel="stylesheet" href="style.css">
   </head>
 
+  <!-- <body class=""> -->
+
   <body class="">
-    <!-- <body class="dark-theme"> -->
 
     <main class="container">
       <nav class="nav">
@@ -82,7 +84,7 @@
         </aside>
         <section class="dashboard">
           <div class="details">
-            <details class="unordered">
+            <details class="unordered" open>
               <summary>
                 <span class="category__title">Unordered</span>
 
@@ -94,14 +96,100 @@
                   <small class="input-message"><i class="svg"></i><span>Input is empty</span></small>
                 </div>
               </summary>
-              Something small enough to escape casual notice. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Dolore libero illo tempore suscipit repellat eius? Voluptatem unde inventore ipsa. Obcaecati ab, neque
-              vero quod, voluptas magnam similique itaque iste recusandae dolore commodi optio delectus praesentium fuga
-              amet, impedit veritatis. Qui earum sed consequuntur inventore iusto maxime assumenda repellendus ullam
-              dolores facilis, impedit sequi, minima modi? Aliquam accusantium doloremque enim veritatis cum inventore,
-              quasi tenetur nemo eaque voluptas voluptatibus explicabo nisi natus unde, ipsum veniam fuga facilis ipsam
-              dolorem quo eum? Repellat provident amet, natus, aliquid aliquam, non modi accusantium qui totam at
-              tenetur. Qui facilis provident, deserunt consequuntur accusantium ducimus?
+
+              <ul class="unordered-list color__list">
+                <li class="color__item">
+                  <label for="color2" style="color:hsl(256, 36%, 25%)">
+                    <input type="text" data-index="2" id="color2" class="color__value" readonly
+                      value="hsl(256, 36%, 25%)">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color1" style="color:#baddad">
+                    <input type="text" data-index="1" id="color1" class="color__value" readonly value="#baddad">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color2" style="color:hsl(256, 36%, 25%)">
+                    <input type="text" data-index="2" id="color2" class="color__value" readonly
+                      value="hsl(256, 36%, 25%)">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color3" style="color:#746593">
+                    <input type="text" data-index="3" id="color3" class="color__value" readonly value="#746593">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color4" style="color:#143420">
+                    <input type="text" data-index="4" id="color4" class="color__value" readonly value="#143420">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color5" style="color:#facade">
+                    <input type="text" data-index="5" id="color5" class="color__value" readonly value="#facade">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color1" style="color:#baddad">
+                    <input type="text" data-index="1" id="color1" class="color__value" readonly value="#baddad">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color2" style="color:hsl(256, 36%, 25%)">
+                    <input type="text" data-index="2" id="color2" class="color__value" readonly
+                      value="hsl(256, 36%, 25%)">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color3" style="color:#746593">
+                    <input type="text" data-index="3" id="color3" class="color__value" readonly value="#746593">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color4" style="color:#143420">
+                    <input type="text" data-index="4" id="color4" class="color__value" readonly value="#143420">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color5" style="color:#facade">
+                    <input type="text" data-index="5" id="color5" class="color__value" readonly value="#facade">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color1" style="color:#baddad">
+                    <input type="text" data-index="1" id="color1" class="color__value" readonly value="#baddad">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color2" style="color:hsl(256, 36%, 25%)">
+                    <input type="text" data-index="2" id="color2" class="color__value" readonly
+                      value="hsl(256, 36%, 25%)">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color3" style="color:#746593">
+                    <input type="text" data-index="3" id="color3" class="color__value" readonly value="#746593">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color4" style="color:#143420">
+                    <input type="text" data-index="4" id="color4" class="color__value" readonly value="#143420">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color5" style="color:#facade">
+                    <input type="text" data-index="5" id="color5" class="color__value" readonly value="#facade">
+                  </label>
+                </li>
+                <li class="color__item">
+                  <label for="color2" style="color:hsl(256, 36%, 25%)">
+                    <input type="text" data-index="2" id="color2" class="color__value" readonly
+                      value="hsl(256, 36%, 25%)">
+                  </label>
+                </li>
+              </ul>
+
             </details>
             <details class="public">
               <summary><span class="category__title">Public</span>
@@ -300,6 +388,7 @@
     <div class="media-query"></div>
     <script type='text/javascript' src="assets/package/tinycolor.js"></script>
     <script src="script.js"></script>
+
   </body>
 
 </html>
