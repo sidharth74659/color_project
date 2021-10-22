@@ -28,7 +28,7 @@
 - [Tint & Shade Generator](https://maketintsandshades.com/)
 
 ### Useful scripts
-
+git
 #### Dealing with media-queries ?
  use this [trick](https://codepen.io/sidharth74659/pen/JjyXpKP?editors=0100) 
 

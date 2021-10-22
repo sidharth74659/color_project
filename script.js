@@ -1,5 +1,6 @@
 // @ts-nocheck
 /*
+    * probably avatars(florin-moji) as default avatars
     * Validation for rgba and hsla colors and more
 
     ! Validation check : 

@@ -9,7 +9,7 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"></script> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
 
-    <link rel="stylesheet" href="trash.css">
+    <link rel="stylesheet" href="trash/trash.css">
     <link rel="stylesheet" href="style.css">
   </head>
 
@@ -201,16 +201,53 @@
                   <small class="input-message"><i class="svg"></i><span>Input is empty</span></small>
                 </div>
               </summary>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis unde magnam harum vel ratione rem,
-                laborum praesentium inventore aperiam culpa. Magni quisquam ea doloribus animi! Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Esse assumenda nulla quos repellat laborum culpa necessitatibus nisi
-                adipisci et commodi fugiat hic ea pariatur quidem quaerat rerum aliquam, expedita dolore reiciendis eos
-                repudiandae. Quae distinctio harum asperiores aspernatur voluptas excepturi eum? Vel molestiae quaerat
-                tempora ad culpa, ducimus labore sapiente est cumque ab eius in inventore suscipit. Ullam corrupti
-                architecto iusto quasi eligendi sunt adipisci, voluptate velit, unde enim sed tenetur explicabo sint
-                quis quos, perspiciatis odit ex ab similique laudantium saepe? Architecto possimus nemo quas. Id
-                nesciunt alias quia quod nemo voluptates! Deserunt quod quaerat nobis molestiae repellat, molestias sed
-                mollitia similique illum fugiat modi reprehenderit alias. Praesentium, fugit.</p>
+             
+              <ul class="public collections">
+                <li class="collection">
+                  <div class="collection__input">
+                    <input type="text" class="input collection__name" value="collection name">
+                    <button class="btn edit__collection__name"></button>
+                  </div>
+
+                  <ul class="collection__list">
+                    <li class="color__item">
+                      <label for="color2" style="color:hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly value="hsl(256, 36%, 25%)">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color2" style="color:hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly value="hsl(256, 36%, 25%)">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color3" style="color:#746593">
+                        <input type="text" data-index="3" id="color3" class="color__value" readonly value="#746593">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color4" style="color:#143420">
+                        <input type="text" data-index="4" id="color4" class="color__value" readonly value="#143420">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color5" style="color:#facade">
+                        <input type="text" data-index="5" id="color5" class="color__value" readonly value="#facade">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color2" style="color:hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly value="hsl(256, 36%, 25%)">
+                      </label>
+                    </li>
+                  </ul>
+
+                </li>
+                <li class="collection"></li>
+                <li class="collection"></li>
+                <li class="collection"></li>
+              </ul>
+
             </details>
             <details class="private">
               <summary><span class="category__title">Private</span>
