@@ -191,8 +191,9 @@
               </ul>
 
             </details>
-            <details class="public" open>
-              <summary><span class="category__title">Public</span>
+            <details class="public">
+              <summary>
+                <span class="category__title">Public</span>
                 <div class="search search--bar">
                   <input type="search" class="input search__input" placeholder="Search" aria-label="true" />
                   <button class="btn search__btn">
@@ -201,23 +202,25 @@
                   <small class="input-message"><i class="svg"></i><span>Input is empty</span></small>
                 </div>
               </summary>
-             
-              <ul class="public collections">
+
+              <ul class="collections">
                 <li class="collection">
                   <div class="collection__input">
-                    <input type="text" class="input collection__name" value="collection name">
-                    <button class="btn edit__collection__name"></button>
+                    <input type="text" class="input collection__name" value="collection name" maxlength="20">
+                    <button class="btn edit__collection__name"><i class="svg edit"></i></button>
                   </div>
 
                   <ul class="collection__list">
                     <li class="color__item">
                       <label for="color2" style="color:hsl(256, 36%, 25%)">
-                        <input type="text" data-index="2" id="color2" class="color__value" readonly value="hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly
+                          value="hsl(256, 36%, 25%)">
                       </label>
                     </li>
                     <li class="color__item">
                       <label for="color2" style="color:hsl(256, 36%, 25%)">
-                        <input type="text" data-index="2" id="color2" class="color__value" readonly value="hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly
+                          value="hsl(256, 36%, 25%)">
                       </label>
                     </li>
                     <li class="color__item">
@@ -237,15 +240,186 @@
                     </li>
                     <li class="color__item">
                       <label for="color2" style="color:hsl(256, 36%, 25%)">
-                        <input type="text" data-index="2" id="color2" class="color__value" readonly value="hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly
+                          value="hsl(256, 36%, 25%)">
                       </label>
                     </li>
                   </ul>
 
                 </li>
-                <li class="collection"></li>
-                <li class="collection"></li>
-                <li class="collection"></li>
+                <li class="collection">
+                  <div class="collection__input">
+                    <input type="text" class="input collection__name" value="collection name" maxlength="20">
+                    <button class="btn edit__collection__name"><i class="svg edit"></i></button>
+                  </div>
+
+                  <ul class="collection__list">
+                    <li class="color__item">
+                      <label for="color2" style="color:hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly
+                          value="hsl(256, 36%, 25%)">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color2" style="color:hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly
+                          value="hsl(256, 36%, 25%)">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color3" style="color:#746593">
+                        <input type="text" data-index="3" id="color3" class="color__value" readonly value="#746593">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color4" style="color:#143420">
+                        <input type="text" data-index="4" id="color4" class="color__value" readonly value="#143420">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color5" style="color:#facade">
+                        <input type="text" data-index="5" id="color5" class="color__value" readonly value="#facade">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color2" style="color:hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly
+                          value="hsl(256, 36%, 25%)">
+                      </label>
+                    </li>
+                  </ul>
+
+                </li>
+                <li class="collection">
+                  <div class="collection__input">
+                    <input type="text" class="input collection__name" value="collection name" maxlength="20">
+                    <button class="btn edit__collection__name"><i class="svg edit"></i></button>
+                  </div>
+
+                  <ul class="collection__list">
+                    <li class="color__item">
+                      <label for="color2" style="color:hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly
+                          value="hsl(256, 36%, 25%)">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color2" style="color:hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly
+                          value="hsl(256, 36%, 25%)">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color3" style="color:#746593">
+                        <input type="text" data-index="3" id="color3" class="color__value" readonly value="#746593">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color4" style="color:#143420">
+                        <input type="text" data-index="4" id="color4" class="color__value" readonly value="#143420">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color5" style="color:#facade">
+                        <input type="text" data-index="5" id="color5" class="color__value" readonly value="#facade">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color2" style="color:hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly
+                          value="hsl(256, 36%, 25%)">
+                      </label>
+                    </li>
+                  </ul>
+
+                </li>
+                <li class="collection">
+                  <div class="collection__input">
+                    <!-- make it a form???  and remove button -->
+                    <input type="text" class="input collection__name" value="collection name" maxlength="20">
+                    <!-- <button class="btn edit__collection__name"><i class="svg edit"></i></button> -->
+                  </div>
+
+                  <ul class="collection__list">
+                    <li class="color__item">
+                      <label for="color2" style="color:hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly
+                          value="hsl(256, 36%, 25%)">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color2" style="color:hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly
+                          value="hsl(256, 36%, 25%)">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color3" style="color:#746593">
+                        <input type="text" data-index="3" id="color3" class="color__value" readonly value="#746593">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color4" style="color:#143420">
+                        <input type="text" data-index="4" id="color4" class="color__value" readonly value="#143420">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color5" style="color:#facade">
+                        <input type="text" data-index="5" id="color5" class="color__value" readonly value="#facade">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color2" style="color:hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly
+                          value="hsl(256, 36%, 25%)">
+                      </label>
+                    </li>
+                  </ul>
+
+                </li>
+                <li class="collection">
+                  <div class="collection__input">
+                    <input type="text" class="input collection__name" value="collection name" maxlength="20">
+                    <button class="btn edit__collection__name"><i class="svg edit"></i></button>
+                  </div>
+
+                  <ul class="collection__list">
+                    <li class="color__item">
+                      <label for="color2" style="color:hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly
+                          value="hsl(256, 36%, 25%)">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color2" style="color:hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly
+                          value="hsl(256, 36%, 25%)">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color3" style="color:#746593">
+                        <input type="text" data-index="3" id="color3" class="color__value" readonly value="#746593">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color4" style="color:#143420">
+                        <input type="text" data-index="4" id="color4" class="color__value" readonly value="#143420">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color5" style="color:#facade">
+                        <input type="text" data-index="5" id="color5" class="color__value" readonly value="#facade">
+                      </label>
+                    </li>
+                    <li class="color__item">
+                      <label for="color2" style="color:hsl(256, 36%, 25%)">
+                        <input type="text" data-index="2" id="color2" class="color__value" readonly
+                          value="hsl(256, 36%, 25%)">
+                      </label>
+                    </li>
+                  </ul>
+
+                </li>
               </ul>
 
             </details>
@@ -259,9 +433,13 @@
                   <small class="input-message"><i class="svg"></i><span>Input is empty</span></small>
                 </div>
               </summary>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis unde magnam harum vel ratione rem,
-                laborum
-                praesentium inventore aperiam culpa. Magni quisquam ea doloribus animi!</p>
+              <ul>
+                <li>saf</li>
+                <li>saf</li>
+                <li>saf</li>
+                <li>saf</li>
+                <li>saf</li>
+              </ul>
 
             </details>
           </div>

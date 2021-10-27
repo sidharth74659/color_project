@@ -28,30 +28,41 @@
 - [Tint & Shade Generator](https://maketintsandshades.com/)
 
 ### Useful scripts
-git
-#### Dealing with media-queries ?
- use this [trick](https://codepen.io/sidharth74659/pen/JjyXpKP?editors=0100) 
 
-#### To copy a text to clipboard using a one-line javascript code
+- #### Adding background color only for [padding?](https://stackoverflow.com/questions/14628601/can-i-add-background-color-only-for-padding)
 
-```js
-navigator.clipboard.writeText(text)
-```
+- #### keyboard accessibility for [details element](https://thepaciellogroup.github.io/AT-browser-tests/test-files/details-summary.html) and [for other elements test](https://thepaciellogroup.github.io/AT-browser-tests/) and a [MDN Resource](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML) and have to check [this](https://www.w3.org/TR/WCAG20-TECHS/SCR29.html)
 
-#### Find element taking up extra space (wil add the source link when i find it)
+- #### For situations that require adding focus-behaviour to label/div that has an input within it, instead of input [try using:focus-within](https://stackoverflow.com/questions/5978239/anyway-to-have-a-label-respond-to-focus-css)
 
-```js
-var docWidth = document.documentElement.offsetWidth;
+- #### [Selecting block of code](https://stackoverflow.com/questions/44956653/selecting-block-of-code-in-visual-studio-code) in Visual Studio Code
 
-[].forEach.call(document.querySelectorAll("*"), function (el) {
-  if (el.offsetWidth > docWidth) {
-    console.log(el);
-  }
-});
-```
+  Use Alt + Shift + → to expand the selection between braces or tags.
 
-### Logging into Github from Terminal using Personal Access Tokens
+  Use Alt + Shift + ← to shrink the selection between braces or tags.
 
-Personal Access Tokens : Go to profile > Settings > Developer Settings > Personal Access Tokens > Generate New Token > Enable required Permissisons > copy code/token (which is availaible only once)
+- #### Dealing with media-queries ? use this [trick](https://codepen.io/sidharth74659/pen/JjyXpKP?editors=0100)
 
-`git remote add origin https://[USERNAME]:[NEW TOKEN]@github.com/[USERNAME]/[REPO].git`
+- #### To copy a text to clipboard using a one-line javascript code
+
+  ```js
+  navigator.clipboard.writeText(text);
+  ```
+
+- #### Find element taking up extra space (wil add the source link when i find it)
+
+  ```js
+  var docWidth = document.documentElement.offsetWidth;
+
+  [].forEach.call(document.querySelectorAll("*"), function (el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  });
+  ```
+
+- ### Logging into Github from Terminal using Personal Access Tokens
+
+  Personal Access Tokens : Go to profile > Settings > Developer Settings > Personal Access Tokens > Generate New Token > Enable required Permissisons > copy code/token (which is availaible only once)
+
+  `git remote add origin https://[USERNAME]:[NEW TOKEN]@github.com/[USERNAME]/[REPO].git`
