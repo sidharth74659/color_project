@@ -60,6 +60,9 @@
     }
   });
   ```
+- #### [Single Page Application Routing](https://stackoverflow.com/questions/52578247/single-page-application-routing)
+
+- #### Why don’t browsers handle routing for [single-page applications?](https://medium.com/@george.norberg/understanding-single-page-application-routing-without-a-library-or-framework-ac781b649995)
 
 - ### Logging into Github from Terminal using Personal Access Tokens
 
